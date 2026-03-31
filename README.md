@@ -8,18 +8,29 @@ Para el movimiento del cubo, se le añadió y editó un script, declarando la ve
 using UnityEngine;
 
 public class MovimientoWASD : MonoBehaviour
+
 {
+
 public float velocidad = 5f;
+
 public float rotacion = 200f;
 
+
 void Update()
+
   {
 
   float moverZ = Input.GetAxis("Vertical");
+  
   float rotarx = Input.GetAxis("Horizontal");
   
+  
   transform. Translate(Vector3.forward * moverZ * velocidad * Time.deltaTime);
+  
   transform.Rotate(Vector3.up * rotarx * rotacion * Time.deltaTime);
+  
   }
+  
 }
+
 
